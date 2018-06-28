@@ -7,5 +7,5 @@ class Emaillist(models.Model):
     last_name = models.CharField(max_length=50)
     email = models.CharField(max_length=200)
 
-    def __Str__(self):
+    def __str__(self):
         return 'Emaillist(%s, %s, %s)' % (self.first_name, self.last_name, self.email)

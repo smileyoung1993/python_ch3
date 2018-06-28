@@ -16,6 +16,7 @@ def form(request):
     return render(request, 'form.html')
 
 def add(request):
+
     emaillist = Emaillist()
     emaillist.first_name = request.POST['fn'] # 이름은 포스트[dict] 방식으로
     emaillist.last_name = request.POST['ln']

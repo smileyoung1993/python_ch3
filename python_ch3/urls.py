@@ -25,5 +25,8 @@ urlpatterns = [
     path('emaillist/form',emaillist_view.form),
     path('emaillist/add',emaillist_view.add),
 
-    path('guestbook/',guestbook_view.index)
+    path('guestbook/',guestbook_view.index),
+    path('guestbook/add', guestbook_view.add),
+    path('guestbook/deleteform',guestbook_view.deleteform),
+    path('guestbook/delete',guestbook_view.delete)
 ]
