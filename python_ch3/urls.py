@@ -15,10 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from emaillist import views
+import emaillist.views as emaillist_view
+import guestbook.views as guestbook_view
+
 urlpatterns = [
     path('admin/', admin.site.urls), # view 이름이 site
-    path('emaillist/',views.index), # viewfile은 templates 밑에 있다. views- > index함수 매핑
-    path('emaillist/form',views.form),
-    path('emaillist/add',views.add)
+
+    path('emaillist/',emaillist_view.index), # viewfile은 templates 밑에 있다. views- > index함수 매핑
+    path('emaillist/form',emaillist_view.form),
+    path('emaillist/add',emaillist_view.add),
+
+    path('guestbook/',guestbook_view.index)
 ]
